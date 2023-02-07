@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/onBoardFragment">
+    app:startDestination="@id/noteFragment">
 
     <fragment
         android:id="@+id/onBoardFragment"
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/noteFragment"
-        android:name="com.geektech.android2dz21.ui.fragments.notefragment.NoteFragment"
+        android:name="com.geektech.android2dz21.ui.fragments.note.NoteFragment"
         android:label="fragment_note"
         tools:layout="@layout/fragment_note" />
 

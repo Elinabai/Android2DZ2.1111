@@ -3,6 +3,7 @@ package com.geektech.android2dz21.ui.fragments.onboard
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
@@ -11,10 +12,12 @@ import androidx.viewpager2.widget.ViewPager2
 import com.geektech.android2dz21.R
 import com.geektech.android2dz21.databinding.FragmentOnboardBinding
 import com.geektech.android2dz21.ui.adapters.OnBoardViewPagerAdapters
+import com.geektech.android2dz21.utils.PreferenceHelper
 
 class OnBoardFragment : Fragment() {
 
     private lateinit var binding: FragmentOnboardBinding
+    private val preferenceHelper = PreferenceHelper()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +36,8 @@ class OnBoardFragment : Fragment() {
     private fun initialize() {
         binding.vpViewPager.adapter = OnBoardViewPagerAdapters(this@OnBoardFragment)
         binding.dostIndicator.attachTo(binding.vpViewPager)
+        preferenceHelper.unit(requireContext())
+        preferenceHelper.saveBoolean = true
     }
 
     private fun setUpListeners() = with(binding.vpViewPager) {

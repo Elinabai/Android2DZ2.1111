@@ -5,4 +5,9 @@
     <string name="start">Пропустить</string>
     <string name="text">Начать работу</string>
     <string name="text1">text</string>
+    <string name="notes">Заметки</string>
+    <string name="notes_2">Поиск заметок</string>
+    <string name="btn">+</string>
+    <string name="ok">Готово</string>
+    <string name="text_1">нужно сделать</string>
 </resources>

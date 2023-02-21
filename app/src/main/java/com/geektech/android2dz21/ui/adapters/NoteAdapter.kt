@@ -11,7 +11,8 @@ import com.geektech.android2dz21.models.NoteModel
 
 class NoteAdapter(
     private var list: ArrayList<NoteModel>,
-    private val onLongClickItem: OnClickItem) :
+    private val onLongClickItem: OnClickItem,
+) :
 
     RecyclerView.Adapter<NoteAdapter.NotAppViewHolder>() {
 
@@ -27,6 +28,7 @@ class NoteAdapter(
             binding.tvItemOne.text = noteModel.line
             binding.tvItemTime.text = noteModel.number
             binding.tvItemNumber.text = noteModel.time
+            binding.tvData2.text = noteModel.data
             binding.cardView.setCardBackgroundColor(Color.parseColor(noteModel.color))
         }
     }
@@ -47,5 +49,4 @@ class NoteAdapter(
     }
 
     override fun getItemCount(): Int = list.size
-
 }

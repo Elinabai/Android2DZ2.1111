@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.note.NoteFragment">
     <TextView
-        android:id="@+id/notes"
+        android:id="@+id/linearManager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black_2"
@@ -24,12 +24,39 @@
         app:drawableStartCompat="@drawable/ic_baseline_menu_24"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/gridManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_2"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="6dp"
+        android:text="@string/notes"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@drawable/shape"
+        app:drawableStartCompat="@drawable/ic_baseline_menu_24"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
     <EditText
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="35dp"
         android:background="@drawable/one"
         android:drawableStart="@drawable/ic_baseline_search_24"
         android:minHeight="48dp"
@@ -40,7 +67,7 @@
         android:textColor="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/notes"
+        app:layout_constraintTop_toBottomOf="@id/help"
         tools:ignore="RtlSymmetry" />
 
     <androidx.recyclerview.widget.RecyclerView

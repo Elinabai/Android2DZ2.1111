@@ -8,6 +8,7 @@ data class NoteModel(
     val line: String,
     val number: String,
     val time: String,
+    val data: String,
     val color: String,
 
     ):java.io.Serializable{

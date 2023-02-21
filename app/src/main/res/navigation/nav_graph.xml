@@ -10,11 +10,10 @@
         android:name="com.geektech.android2dz21.ui.fragments.onboard.OnBoardFragment"
         android:label="fragment_onboard"
         tools:layout="@layout/fragment_onboard" >
+
         <action
-            android:id="@+id/action_onBoardFragment_to_noteFragment"
-            app:destination="@id/noteFragment"
-            app:popUpTo="@id/nav_graph"
-            app:popUpToInclusive="true"/>
+            android:id="@+id/action_onBoardFragment_to_blankFragment"
+            app:destination="@id/signInFragment" />
     </fragment>
     <fragment
         android:id="@+id/noteFragment"
@@ -32,6 +31,21 @@
         tools:layout="@layout/fragment_detail" >
         <action
             android:id="@+id/action_detailFragment_to_noteFragment"
+            app:destination="@id/noteFragment" />
+        <argument
+            android:name="model"
+            app:argType="string" />
+        <argument
+            android:name="isUpdate"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.geektech.android2dz21.ui.fragments.signin.SignInFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_blankFragment_to_noteFragment"
             app:destination="@id/noteFragment" />
     </fragment>
 

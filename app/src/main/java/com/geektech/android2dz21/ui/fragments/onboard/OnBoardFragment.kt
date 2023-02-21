@@ -46,7 +46,7 @@ class OnBoardFragment : Fragment() {
             }
         }
         binding.tvText.setOnClickListener {
-            findNavController().navigate(R.id.action_onBoardFragment_to_noteFragment)
+            findNavController().navigate(R.id.action_onBoardFragment_to_blankFragment)
         }
         binding.vpViewPager.registerOnPageChangeCallback(object :
             ViewPager2.OnPageChangeCallback() {

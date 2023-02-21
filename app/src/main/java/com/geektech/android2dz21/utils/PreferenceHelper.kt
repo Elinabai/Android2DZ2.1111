@@ -14,4 +14,8 @@ class PreferenceHelper {
     var saveBoolean: Boolean
     set(value) = sharedPreference.edit().putBoolean("key", value).apply()
     get() = sharedPreference.getBoolean("key",false)
+
+    var signUp:Boolean
+    set(value) = sharedPreference.edit().putBoolean("sign",value).apply()
+    get() = sharedPreference.getBoolean("sign",false)
 }

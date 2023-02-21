@@ -7,9 +7,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.geektech.android2dz21.App
+import com.geektech.android2dz21.App.Companion.preferenceHelper
 import com.geektech.android2dz21.R
 import com.geektech.android2dz21.databinding.FragmentNoteBinding
 import com.geektech.android2dz21.interfaces.OnClickItem
@@ -35,6 +38,15 @@ class NoteFragment() : Fragment(), OnClickItem {
         initialize()
         setList()
         setupListeners()
+        changeLayoutManager()
+    }
+
+    private fun changeLayoutManager() {
+        if (preferenceHelper.saveBoolean) {
+            binding.notResView.layoutManager = LinearLayoutManager(requireContext())
+        } else {
+            binding.notResView.layoutManager = GridLayoutManager(requireContext(), 2)
+        }
     }
 
     private fun initialize() {
@@ -48,9 +60,22 @@ class NoteFragment() : Fragment(), OnClickItem {
         btnMaterial.setOnClickListener {
             findNavController().navigate(R.id.action_noteFragment_to_detailFragment)
         }
+        gridManager.setOnClickListener {
+            preferenceHelper.saveBoolean = false
+            notResView.layoutManager = GridLayoutManager(requireContext() ,2)
+            gridManager.isVisible = false
+            linearManager.isVisible = true
+        }
+        linearManager.setOnClickListener {
+            preferenceHelper.saveBoolean = true
+            notResView.layoutManager = LinearLayoutManager(requireContext())
+            gridManager.isVisible = true
+            linearManager.isVisible = false
+        }
     }
 
     private fun setList() {
+
         App().getInstance()?.noteDao()?.getAll()?.observe(viewLifecycleOwner){
             notAppAdapter.setList(it as ArrayList<NoteModel>)
         }

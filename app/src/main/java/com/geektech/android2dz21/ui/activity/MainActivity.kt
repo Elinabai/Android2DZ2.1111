@@ -27,10 +27,9 @@ class MainActivity : AppCompatActivity() {
         findFragmentById(R.id.fragment_container) as NavHostFragment
         navController = navHostFragment.navController
 
-        if (App.preferenceHelper.saveBoolean) {
+        if (App.preferenceHelper.saveBoolean && App.preferenceHelper.signUp ) {
                 navController.navigate(R.id.noteFragment)
-            }
-        else{
+            }else{
             navController.navigate(R.id.onBoardFragment)
         }
     }

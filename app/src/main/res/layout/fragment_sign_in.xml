@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/im_notes"
         android:textColor="@color/grey_2"
-        android:text="Регистрация по номеру"
+        android:text="@string/registr"
         android:textSize="18sp"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,14 +35,16 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tv_tv"
         android:layout_marginTop="40dp"
+        android:text="@string/call"
         android:layout_marginHorizontal="25dp"
         android:inputType="phone"
         android:background="@drawable/round"
         android:drawableStart="@drawable/ic_outline_call_24"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:padding="10dp"
         android:paddingStart="18dp"
-        android:textColor="@color/grey_2"/>
+        android:textColor="@color/grey_2"
+        tools:ignore="RtlSymmetry" />
 
     <EditText
         android:id="@+id/et_password"
@@ -53,9 +55,9 @@
         android:layout_marginHorizontal="25dp"
         android:background="@drawable/round"
         android:drawableStart="@drawable/ic_outline_markunread_24"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:padding="15dp"
-        android:hint="Ваш код"
+        android:hint="@string/cod"
         android:textColorHint="@color/white"
         android:paddingStart="15dp"
         android:textColor="@color/grey_2"/>
@@ -68,9 +70,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="25dp"
-        android:text="Получить код"
+        android:text="@string/get"
         app:cornerRadius="15dp"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:backgroundTint="@color/orange_2"/>
 
     <com.google.android.material.button.MaterialButton
@@ -82,16 +84,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="25dp"
         android:visibility="invisible"
-        android:text="подтведить"
+        android:text="@string/ok_ok"
         app:cornerRadius="15dp"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:backgroundTint="@color/orange_2"/>
 
     <TextView
         android:id="@+id/btn_set_cod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Отправить снова"
+        android:text="@string/set"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_cod_2"

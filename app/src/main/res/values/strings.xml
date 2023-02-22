@@ -10,4 +10,10 @@
     <string name="btn">+</string>
     <string name="ok">Готово</string>
     <string name="text_1">нужно сделать</string>
+    <string name="registr">Регистрация по номеру</string>
+    <string name="call">+996</string>
+    <string name="cod">Ваш код</string>
+    <string name="get">Получить код</string>
+    <string name="ok_ok">подтведить</string>
+    <string name="set">Отправить снова</string>
 </resources>

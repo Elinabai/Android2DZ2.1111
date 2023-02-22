@@ -26,7 +26,6 @@ class NoteFragment() : Fragment(), OnClickItem {
     private lateinit var binding: FragmentNoteBinding
     private val list = ArrayList<NoteModel>()
     private val notAppAdapter = NoteAdapter(list, this)
-    private lateinit var searchView: SearchView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,7 +41,6 @@ class NoteFragment() : Fragment(), OnClickItem {
         setList()
         setupListeners()
         changeLayoutManager()
-        searchView
     }
 
     private fun changeLayoutManager() {
@@ -99,21 +97,4 @@ class NoteFragment() : Fragment(), OnClickItem {
         }
         builder.create()
     }
-//    searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-//        override fun onQueryTextSubmit(query: String?): Boolean {
-//            // on below line we are checking
-//            // if query exist or not.
-//            if (recy.contains(query)) {
-//                // if query exist within list we
-//                // are filtering our list adapter.
-//                listAdapter.filter.filter(query)
-//            } else {
-//                // if query is not present we are displaying
-//                // a toast message as no  data found..
-//                Toast.makeText(this@MainActivity, "No Language found..", Toast.LENGTH_LONG)
-//                    .show()
-//            }
-//            return false
-//        }
-//    }
 }

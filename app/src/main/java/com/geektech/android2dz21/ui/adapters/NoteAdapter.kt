@@ -11,9 +11,8 @@ import com.geektech.android2dz21.models.NoteModel
 
 class NoteAdapter(
     private var list: ArrayList<NoteModel>,
-    private val onLongClickItem: OnClickItem,
-) :
-
+//    private var countryFilterList: ArrayList<String> = ArrayList<String>(),
+    private val onLongClickItem: OnClickItem, ) :
     RecyclerView.Adapter<NoteAdapter.NotAppViewHolder>() {
 
     @SuppressLint("NotifyDataSetChanged")

@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
 
-    <EditText
+    <SearchView
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
         android:paddingStart="15dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:text="@string/notes_2"
+        android:hint="@string/notes_2"
         android:textColor="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

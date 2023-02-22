@@ -28,8 +28,10 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         if (App.preferenceHelper.saveBoolean && App.preferenceHelper.signUp ) {
-                navController.navigate(R.id.noteFragment)
-            }else{
+                navController.navigate(R.id.signInFragment)
+            }else if (App.preferenceHelper.saveBoolean){
+               navController.navigate(R.id.noteFragment)
+        }else{
             navController.navigate(R.id.onBoardFragment)
         }
     }
